@@ -1,41 +1,75 @@
-# Cargo Load Optimizer 🚢
+# 🚢 Cargo Load Optimizer
 
-A lightweight, high-performance web application that calculates the most valuable assortment of shipping items you can pack into a cargo container without exceeding its maximum weight capacity.
+A lightweight, high-performance web application that calculates the most valuable combination of items that can be loaded into a cargo container without exceeding its weight capacity.
 
-Built entirely using **Pure Core Java** (utilizing `com.sun.net.httpserver`) and **Raw HTML/CSS** — no JavaScript, no external frameworks, and no bulky servers like Apache Tomcat required! 
+Built using **Pure Java (no frameworks)** and **HTML/CSS** — no JavaScript, no external dependencies.
 
-## Features
-- **Dynamic Programming Engine**: Uses a traditional 0/1 Knapsack algorithm implemented in Java to guarantee the mathematically optimal cargo selection.
-- **Pure Java Backend**: Serves web requests and handles session state natively using the built-in JDK HTTP server.
-- **Zero-Dependency UI**: Uses standard HTML form submissions for 100% of interactions without a single line of JavaScript.
-- **Docker-Ready**: Comes with a `Dockerfile` for seamless containerized deployment on cloud providers like Render, AWS, or Railway.
+---
 
-## How to Run Locally
+## ✨ Features
 
-You only need **Java 17** (or newer) installed on your machine.
+- 🧠 **Dynamic Programming Engine**
+  - Implements the classic **0/1 Knapsack Algorithm** to guarantee optimal results.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/rohzyy/Cargo-Load-Optimizer.git
-   cd Cargo-Load-Optimizer
-   ```
+- ⚡ **Pure Java Backend**
+  - Uses `com.sun.net.httpserver` (built into JDK)
+  - No Tomcat, no Spring, no frameworks
 
-2. **Compile the server:**
-   ```bash
-   javac WebServer.java
-   ```
+- 🌐 **Zero JavaScript UI**
+  - Fully functional using plain HTML forms
+  - Clean and simple user experience
 
-3. **Run the application:**
-   ```bash
-   java WebServer
-   ```
+- 📦 **Docker Support**
+  - Easily deployable on cloud platforms like:
+    - Render
+    - Railway
+    - AWS
 
-4. **Use the App:**
-   Open your browser and navigate to [http://localhost:8080](http://localhost:8080)
+---
 
-## Cloud Deployment
+## 🛠️ Tech Stack
 
-This app is fully containerized. You can easily deploy it for free using platforms like [Render.com](https://render.com) or [Railway.app](https://railway.app):
-1. Create a new Web Service using your GitHub repository.
-2. The platform will automatically detect the provided `Dockerfile`.
-3. It will compile your Java code, expose port `8080`, and give you a live shareable web URL.
+- **Backend:** Java (JDK 17+)
+- **Server:** Built-in Java HTTP Server
+- **Frontend:** HTML, CSS
+- **Algorithm:** 0/1 Knapsack (Dynamic Programming)
+- **Deployment:** Docker
+
+---
+
+## 📂 Project Structure
+
+```
+Cargo-Load-Optimizer/
+│
+├── WebServer.java
+├── Item.java
+├── templates/
+├── Dockerfile
+└── README.md
+```
+
+---
+
+## 🚀 How to Run Locally
+
+### ✅ Prerequisites
+- Java 17 or higher installed
+
+### 1️⃣ Clone the Repository
+git clone https://github.com/rohzyy/Cargo-Load-Optimizer.git  
+cd Cargo-Load-Optimizer
+
+### 2️⃣ Compile
+javac WebServer.java
+
+### 3️⃣ Run
+java WebServer
+
+### 4️⃣ Open
+http://localhost:8080
+
+---
+
+## 📜 License
+MIT License
