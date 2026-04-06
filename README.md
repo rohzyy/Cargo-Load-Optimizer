@@ -67,7 +67,7 @@ javac WebServer.java
 java WebServer
 
 ### 4️⃣ Open
-http://localhost:8080
+cargo-load-optimizer.onrender.com/
 
 ---
 
