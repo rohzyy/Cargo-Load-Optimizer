@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="config-view">
+        <h1>Configure Your Cargo</h1>
+        
+        <form action="/" method="post">
+            <div class="row-1">
+                <label>Maximum Capacity (kg)</label>
+                <input class="input-all" name="capacity" type="number" value="{{CAPACITY}}" placeholder="Enter capacity" style="width: 100%; max-width: 650px;" required min="1">
+            </div>
+
+            <h2>Add Item</h2>
+
+            <div class="row-2">
+                <div class="field">
+                    <label>Name</label>
+                    <input class="input-all" name="name" type="text" placeholder="Item name">
+                </div>
+                <div class="field">
+                    <label>Weight (kg)</label>
+                    <input class="input-all" name="weight" type="number" placeholder="0" min="1">
+                </div>
+                <div class="field">
+                    <label>Value ($)</label>
+                    <input class="input-all" name="value" type="number" placeholder="0" min="1">
+                </div>
+            </div>
+
+            <div class="button-add">
+                <button type="submit" name="action" value="add" class="button-css-add">Add Item</button>
+            </div>
+            
+            <div class="final-button" style="margin-top: 15px;">
+                <button type="submit" name="action" value="optimize" class="final-btn">Run Optimization</button>
+            </div>
+        </form>
+
+        <h2 style="margin-top: 30px;">Items ({{TOTAL_ITEMS}})</h2>
+
+        {{ITEMS_TABLE}}
+    </div>
+    
+    {{RESULTS_SECTION}}
+</body>
+</html>
